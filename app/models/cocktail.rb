@@ -1,4 +1,15 @@
 class Cocktail < ApplicationRecord
+  include PgSearch::Model
+  pg_search_scope :global_search,
+  against: [:name, :preparation ],
+  associated_against: {
+    flavors: [:name],
+    categories: [:name]
+  },
+  using: {
+    tsearch: {any_word: true}
+  }
+
   acts_as_taggable_on :categories
   acts_as_taggable_on :flavors
 
