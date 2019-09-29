@@ -2,8 +2,8 @@
   <div class="row">
     <div class="col-xs-12 col-sm-8 offset-sm-2">
     <%= simple_form_for :search, url: root_path, method: "GET" do |f| %>
-      <%= f.input :flavors, label: "Category", collection: $categories, as: :checkboxes %>
-      <%= f.input :strengths, label: "Flavor", collection: $flavors, as: :checkboxes %>
+      <%= f.input :flavors, label: "Category",  collection: $categories, as: :check_boxes %>
+      <%= f.input :strengths, label: "Flavor", collection: $flavors, as: :check_boxes %>
       <%= f.submit "Search", class: "btn btn-primary" %>
       <%= link_to "Reset", root_path  %>
     <% end %>
