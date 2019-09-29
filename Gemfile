@@ -15,6 +15,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'acts-as-taggable-on', '~> 6.0'
+gem 'pg_search'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
